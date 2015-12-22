@@ -1,4 +1,5 @@
 // probando MIDI con el NanoKontrol2
+// buen tutorial https://www.youtube.com/watch?v=Oz4KYZ9KLc0
 
 s.boot;
 
@@ -26,4 +27,24 @@ cc = MIDIFunc.cc({ |veloc, num, chan, src|
 });
 
 MIDIFunc.trace(true);
+)
+
+
+// Otra forma: con MIDIdef
+
+(
+MIDIdef.noteOn(\nombre, {
+	arg vel, note, chan, src;
+	[vel, note, chan, src].postln;
+});
+
+MIDIdef.cc(\nombre, {
+	arg vel, note, chan, src;
+	[vel, note, chan, src].postln;
+});
+
+MIDIdef.bend(\nombre, {
+	arg vel, note, chan, src;
+	[vel, note, chan, src].postln;
+});
 )
