@@ -33,18 +33,18 @@ MIDIFunc.trace(true);
 // Otra forma: con MIDIdef
 
 (
-MIDIdef.noteOn(\nombre, {
+MIDIdef.noteOn(\noteOnTest, {
 	arg vel, note, chan, src;
 	[vel, note, chan, src].postln;
 });
 
-MIDIdef.cc(\nombre, {
+MIDIdef.cc(\ccTest, {
 	arg vel, note, chan, src;
 	[vel, note, chan, src].postln;
 });
 
-MIDIdef.bend(\nombre, {
-	arg vel, note, chan, src;
-	[vel, note, chan, src].postln;
+MIDIdef.bend(\bendTest, {
+	arg val, chan, src;
+	[val, chan, src].postln;
 });
 )
